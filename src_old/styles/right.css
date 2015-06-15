@@ -1,0 +1,13 @@
+﻿header {
+  background-image: url('res/headers/old-right.jpg');
+  background-color:#000000;
+  width: 100%;
+}
+
+.theme-background {
+  background-color: #C8CE47;
+}
+
+nav .link:hover{
+  background-color: #003300;
+}

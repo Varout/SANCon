@@ -1,0 +1,30 @@
+/* ====================
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+==================== */
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -70px; /* The bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+	height: 70px; /* '.push' must be the same height as 'footer' */
+}
+
+footer{
+ 	background-color:rgba(255, 255, 255, 0.5);
+	width:960px;
+	margin:0 auto;
+	font-size: small;
+}

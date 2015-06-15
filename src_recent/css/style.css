@@ -1,0 +1,345 @@
+﻿/* ========================================
+	##  Contents  ##
+
+	Section	#1.0	General
+	Section	#1.1	Header
+	Section	#1.2	Navigation
+	Section #1.3.1	Page Content: Front Page (index)
+	Section #1.3.2	Page Content: General
+	Section #1.3.3	Page Content: Stall / Sponsor Container
+
+======================================== */
+
+/* ========================================
+Section #1.0
+		General
+======================================== */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color:grey;
+/*	Source: http://andreewallin.deviantart.com/art/Metropolis-Part-1-105316806	*/
+	background-image: url('res/static_background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 1920px 1080px;
+	background-attachment: fixed;
+	overflow-y: scroll;
+}
+
+#wrapper{
+	width: 960px;
+	margin:0 auto;
+ 	background-color:rgba(255, 255, 255, 0.8);
+}
+
+.center{
+	text-align: center;
+}
+
+.center img{
+	margin-bottom:1em;
+	max-height: 250px;
+}
+
+.clear{
+	clear:both;
+}
+
+.fl-left{
+	float:left;
+}
+
+.fl-right{
+	float:right;
+}
+
+.contest ul ul, .contest ol ul, .contest ol ol, .contest ul ol, .contest li{
+	margin-left:15px;
+}
+
+.half-column{
+	margin:0;
+	padding:0;
+	width:50%;
+	float:left;
+}
+
+/* ========================================
+Section #1.1
+		Header
+======================================== */
+/*  
+	H1 font-size was originally 72px, however changed it so that there wouldn't be a space between 
+	the nav bar and the header in Firefox.
+*/
+header .left{
+	float:left;
+	width:20%;
+}
+
+header .left img{
+	float:left;
+}
+
+header img.social-image{
+	height:76px;
+	width:65px;
+	display:inline-block;
+	float:right;
+	opacity:0.5;
+	transition:all .5s ease 0s;
+	-webkit-transition:all .5s ease 0s;
+}
+
+header img.social-image:hover{
+	opacity:1;
+}
+
+header a, header a:hover, header a:visited {
+	text-decoration:none;
+	color:black;
+}
+
+/* ========================================
+Section #1.2
+		Navigation
+======================================== */
+nav{
+	width: 100%;
+	background-color: #999999;
+	color:white;
+}
+
+nav a{
+	display: block;
+	text-decoration:none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: linear-gradient(0deg, rgba(80,80,80,1) 0%, rgba(80,80,80,0) 10%, rgba(80,80,80,0) 90%, rgba(80,80,80,1) 100%);
+}
+
+nav a, nav a:visited, nav ul li.nav-active ul li a, nav ul li.nav-active ul li a:visited{
+	color: white;
+}
+
+#nav-menu{
+	width: 100%;
+}
+
+#nav-menu ul{
+	list-style:none;
+	background-color: #999999;
+}
+
+#nav-menu ul li{
+	width:25%;
+	float:left;
+	position: relative;
+	background: linear-gradient(90deg, rgba(80,80,80,1) 0%, rgba(80,80,80,0) 3%, rgba(80,80,80,0) 97%, rgba(80,80,80,1) 100%);
+}
+
+#nav-menu ul li ul li{
+	width:100%;
+}
+
+#nav-menu ul li ul{
+	display:none;
+	position:absolute;
+	width:100%;
+}
+
+#nav-menu ul li:hover ul{
+	display:block;
+	z-index: 15;
+}
+
+/*	Activated when the user hovers over a non-active nav link	*/
+nav a:hover, nav ul li.nav-active ul a:hover, nav ul li ul a:hover{
+	background: linear-gradient(0deg, rgba(102,102,255,1) 0%, rgba(102,102,255,0) 20%, rgba(80,80,80,0) 90%, rgba(80,80,80,1) 100%);
+}
+
+/*	Making sure that any <li>s in a sublist don't have the .nav-active style applied to them	*/
+nav ul li.nav-active ul a{
+	background: linear-gradient(0deg, rgba(80,80,80,1) 0%, rgba(80,80,80,0) 10%, rgba(80,80,80,0) 90%, rgba(80,80,80,1) 100%);
+}
+
+/*	Making the last child in a sub-list have rounded bottom corners	*/
+#nav-menu ul li ul li:last-child, #nav-menu ul li ul, #nav-menu ul li ul li:last-child a{
+	border-radius:0 0 1em 1em;
+}
+
+/* ========================================
+Section #1.3.1
+		Page Content:  Front Page (index)
+======================================== */
+/*
+	For stall holders, pop up on a scroll type image with all the info about the stall and their banner, 
+	card or logo.
+	Have the sides white/dull out, if clicking on the sides, takes back to the main page.
+	Effect is called Modal Windows.  Could see if the effect is right for what I want to do.
+	
+	Option #1:
+	http://stackoverflow.com/questions/19684599/html5-css3-modal-window-close-when-click-outside
+	http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
+	
+	Option #2:
+	http://drublic.github.io/css-modal/#howto-css
+	
+*/
+/*
+	*** Note: A total width of 730px is the best width to use until the bottom of the Twitter feed.
+*/
+.twitter-timeline{
+	float:right;
+}
+
+/*	Layout for promo and pins	*/
+.promo{
+	margin-bottom:10px;
+ 	background-color:rgba(255, 255, 255, 0.7);
+	border-radius:1em;
+	width:730px;
+	float: left;
+}
+
+.non-promo{
+	margin-bottom:10px;
+	border-radius:1em;
+	width:730px;
+	float: left;
+}
+
+.promo-text{
+	margin-top:15px;
+	width:640px;
+	float:left;
+	text-align: justify;
+}
+
+.pins-column{
+	width:45px;
+	float:left;
+}
+
+.pins-bottom{
+	width:100%;
+	float:left;
+}
+
+/*	End promo and pins.  Pins no longer used.	*/
+
+.text-heading{
+	width:100%;
+	margin-bottom: 5px;
+}
+
+.heading-blue{
+	background: linear-gradient(270deg, rgba(102,102,255,0) 0%, rgba(102,102,255,0.4) 100%);
+}
+
+/* ========================================
+Section #1.3.2
+		Page Content:  General
+======================================== */
+#display-index{
+	padding:10px;
+	min-height:600px;	/*
+	margin-bottom:70px;	/*  This is to make sure that the display div doesn't overlap the footer on longer pages  */
+	text-align: justify;
+}
+
+#display{
+	padding-top:30px;
+	padding-bottom:15px;
+	padding-left:55px;
+	padding-right:55px;
+	text-align: justify;
+}
+
+#display p{
+	padding-bottom:1em;
+}
+
+.list-a{
+	list-style-type: lower-latin;
+}
+
+.list-none{
+	list-style-type: none;
+	font-style: italic;
+}
+
+.list-no-it{
+	list-style-type: none;
+}
+
+/* ========================================
+Section #1.3.3
+		Page Content:  Stall / Sponsor Container
+======================================== */
+.large-container {
+	float:left;
+	width:100%;
+	margin:0px;
+	padding:0px;
+	padding-bottom:1em;
+}
+
+.small-container {
+	float:left;
+	width:50%;
+	margin:0px;
+	padding:0px;
+	padding-bottom:1em;
+}
+
+.small-container img{
+	max-width:100%;
+	max-height:50px;
+}
+
+.stall-text{
+	width:85%;
+	float:left;
+}
+
+.stall-image{
+	width:15%;
+	float:left;
+}
+
+.stall-image img{
+	max-width:100px;
+}
+
+.large-container .stall-image-2014{
+	float:left;
+	width:30%;
+}
+
+.stall-image-2014 img{
+	max-width:90%;
+}
+
+#display h3{
+	padding-bottom:5px;
+}
+
+.stall-text-2014{
+	width:70%;
+	float:left;
+}
+
+
+
+/* ========================================
+Section #1.3.4
+		Page Content:  Event Container
+======================================== */
+.event-list{
+	margin-left:15px;
+}

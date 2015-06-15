@@ -1,0 +1,12 @@
+﻿header {
+  background-image: url('res/headers/old-centre.jpg');
+  background-color:#000000;
+}
+
+.theme-background {
+  background-color: #C55E38;
+}
+
+nav .link:hover{
+	background:#77341E;
+}

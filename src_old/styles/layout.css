@@ -1,0 +1,654 @@
+﻿/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Media Queries
+	
+	#1.0 Standard Layout
+		#1.1 Reset
+		#1.2 Overall
+		#1.3 Header
+		#1.4 Nav-bar
+		#1.5 Main section
+		#1.6 Links
+		#1.7 Image drops
+		#1.8 Social
+		#1.9 Footer
+		#1.10 Ridiculous stuff
+	
+	#2.0 Tablet Portrait size to standard 960 (devices and browsers)
+		#2.2 Overall
+		#2.3 Header
+		#2.4 Nav-bar
+		#2.5 Main section
+		#2.6 Links
+		#2.7 Image drops
+		#2.8 Social
+		#2.9 Ridiculous stuff
+	
+	#3.0 All Mobile Sizes (devices and browser)
+		#3.2 Overall
+		#3.3 Header
+		#3.4 Nav-bar
+		#3.5 Main section
+		#3.6 Links
+		#3.7 Image drops
+		#3.8 Social
+		#3.9 Ridiculous stuff
+
+	#4.0 Mobile Landscape Size to Tablet Portrait (devices and browsers)
+		#4.2 Overall
+		#4.3 Header
+		#4.4 Nav-bar
+		#4.5 Main section
+		#4.6 Links
+		#4.7 Image drops
+		#4.8 Social
+		#4.9 Ridiculous stuff
+
+*/
+	/* ===== #1.0 Standard Layout ===== */
+
+	/* ===== #1.1 Reset ===== */
+	html {
+	  overflow-y: scroll;
+	}
+	
+	* {
+	  margin: 0;
+	  padding: 0;
+	}
+	
+	.clear {
+	  clear: both;
+	}
+	
+	/* ===== #1.2 Overall ===== */
+	body {
+	  background-color: #999;
+	  background-image: url('res/linen.png');
+	  background-repeat: repeat;
+	}
+		
+	#main{
+		overflow:auto;
+	}
+	
+	#wrap {
+	  width: 960px;
+	  margin: 0 auto;
+	  background-color: rgba(100,100,100,0.2);
+	}
+	
+	/*  For IE, we don't want any borders around image links  */
+	a img{
+		border:0;
+	}
+	
+	/* ===== #1.3 Header ===== */
+	header {
+	  height: 200px;
+	}
+	
+	#title {
+	  display: block;
+	  padding-top: 125px;
+	  text-align: right;
+	}
+	
+	header a img {
+	  height: 75px;
+	}
+	
+	/* ===== #1.4 Nav-bar ===== */
+	nav {
+	  width: 100%;
+	  background-color: black;
+	}
+	
+	nav a {
+		display:block;
+	}
+	
+	.linkline{
+		float:left;
+		width:100%;
+	}
+	
+	.link{
+		display:block;
+		float:left;
+		width:160px;
+		text-align:center;
+		padding:5px 0px 5px 0px;
+	}
+	
+	.link:hover{
+		-webkit-transition: all 1.5s ease;
+		-moz-transition: all 1.5s ease;
+		-o-transition: all 1.5s ease;
+		transition: all 1.5s ease;
+	}
+	
+	nav .link-mobile{
+		display:none;
+	}
+
+	#nav-title{
+		background:#003300;
+	}
+	
+	/* ===== #1.5 Main section ===== */
+	section {
+	  margin: 11px 10px 42px 10px;
+	  padding: 10px;
+	}
+	
+	hr {
+	  margin-bottom: 21px;
+	}
+	
+	#about-title {
+	  text-align: center;
+	}
+	
+	#icons {
+	  margin: 0px auto 80px auto;
+	  width: 531px;
+	  height: 50px;
+	}
+	
+	#icons img {
+	  width: 50px;
+	  margin-left: 28px;
+	  margin-right: 28px;
+	  float: left;
+	}
+	
+	.column{
+		width: 50%; 
+		float:left;
+	}
+	
+	.column ul {
+		list-style:circle;
+		list-style-type:circle;
+	}
+	
+	.stall-container {
+		float:left;
+		width:100%;
+	}
+	
+	.stall-text{
+		width:85%;
+		float:left;
+	}
+	
+	.stall-image{
+		width:15%;
+		float:left;
+	}
+
+	.stall-image img{
+		max-width:100px;
+	}
+	
+	.stall-banner{
+		width:15%;
+		float:left;
+		padding-top:15px;
+	}
+	
+	.stall-banner img{
+		max-width:100px;
+	}
+	
+	#mobile-timetable{
+		display:none;
+	}
+	
+	.sponsor-image{
+		height:50px;
+		max-width:50%;
+	}
+	
+	ol .indent{
+		padding: 20px;
+		list-style-type:lower-alpha;
+	}
+	
+	/* ===== #1.6 Links ===== */
+	
+	#object {
+	  width: 400px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-bottom: 21px;
+	}
+		
+	.feature-image {
+	  text-align: center;
+	  padding-bottom: 1em;
+	}
+	
+	.feature-image img {
+	  max-height: 400px;
+	  max-width: 600px;  
+	}
+	
+	/* ===== #1.7 Image drops ===== */
+	.imagefloat {
+	  display: block;
+	  margin: 2px;
+	}
+	
+	.imagefloat img {
+	  max-width: 500px;
+	  max-height: 300px;
+	}
+	
+	.imagefloat.right {
+	  float: right;
+	  margin-left: 10px;
+	}
+	
+	.imagefloat.center {
+	  margin-top: 5px;
+	  margin-bottom: 5px;
+	}
+	
+	.imagefloat.left {
+	  float: left;
+	  margin-right: 10px;
+	}
+
+	.merch img{
+		max-width: 500px;
+	}
+	
+	#minifies-m{
+		width:40px
+	}
+	
+	/* ===== #1.8 Social ===== */
+	#social {
+	  float: right;
+	}
+	
+	#social a {
+	  text-decoration: none;
+	}
+	
+	#social a img {
+	  opacity: 0.5;
+	  -moz-opacity: 0.5;
+	  filter:alpha(opacity=50);
+	  border:0;
+	}
+	
+	#social a img:hover {
+	  opacity: 1;
+	  -moz-opacity: 1;
+	  filter:alpha(opacity=1);
+	}
+	
+	.soc_img {
+	  height: 16px;
+	  padding: 5px;
+	  vertical-align: text-bottom;
+	  padding:0;
+	  margin-right: 10px;
+	}
+	
+	
+	/* ===== #1.9 Footer ===== */
+	#main {
+		overflow:auto;
+	/*	padding-bottom: 50px; */
+	}	
+	/*
+	footer {
+		position: relative;
+		margin: -50px auto 0 auto;
+		height: 50px;
+		clear:both;
+		width:960px;
+	}
+	*/
+	footer{
+		width: 960px;
+		margin: 0 auto;
+		background-color: rgba(100,100,100,0.2);
+		position: relative;
+		clear:both;
+	}
+
+	footer p {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		text-align: center;
+		font-size: 12px;
+	} 
+	
+	/*Opera Fix*/
+	body:before {/* thanks to Maleika (Kohoutec)*/
+		content:"";
+		height:100%;
+		float:left;
+		width:0;
+		margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+	}
+
+	/* ===== #1.10 Ridiculous stuff =====
+	 OK, this is getting ridiculous.
+	 Error message ponies. Friendship is HTTP codes.
+	 Rarity is best pony.
+	*/
+	
+	.pony {
+	  text-align: center;
+	}
+	
+	.pony img {
+	  max-height: 400px;
+	  max-width: 600px;
+	}
+
+	/* #2.0 Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+	
+	/* ===== #2.2 Overall ===== */
+	body {
+	  background-color: rgba(100,100,100,0.2);
+	  background-image: url('res/linen.png');
+	  background-repeat: repeat;
+	}
+	
+	#wrap {
+	  width: 100%;
+	  background-color: rgba(100,100,100,0);
+	}
+	
+	/* ===== #2.3 Header ===== */
+	header{
+		display:none;
+	}
+
+	/* ===== #2.4 Nav-bar ===== */
+	nav .link{
+		width:16.5%;
+	}
+	
+	nav .link-mobile{
+		display:none;
+	}
+	
+	/* ===== #2.5 Main section ===== */
+
+	.column{
+		display:none;
+	}
+	
+	.contact{
+		display:inline;
+	}
+		
+	.stall-image{
+		display:none;
+	}
+
+	.stall-banner{
+		display:none;
+	}
+	
+	#past-stalls{
+		display:none;
+	}
+	
+	.feature-image{
+		display:none;
+	}
+	
+	#mobile-timetable{
+		display:none;
+	}
+
+	/* ===== #2.6 Links ===== */
+	/* ===== #2.7 Image drops ===== */
+	.imagefloat {
+	  display: none;
+	}
+
+	/* ===== #2.8 Social ===== */
+	
+	/* ===== #2.9 Footer ===== */
+	#main {
+		overflow:auto;
+	}	
+	
+	footer {
+		width:100%;
+		height:auto;
+		background-color: rgba(100,100,100,0);
+	}
+
+	/* ===== #2.10 Ridiculous stuff ===== */
+
+	
+	}
+
+	/* #3.0 All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+	
+	/* ===== #3.2 Overall ===== */
+	body {
+	  background-color: #999;
+	  background-image: url('res/linen.png');
+	  background-repeat: repeat;
+	}
+	
+	#wrap {
+	  width: 100%;
+/*	  background-color:fuchsia;	*/
+		background-color: rgba(100,100,100,0);
+	}
+
+	/* ===== #3.3 Header ===== */
+	header{
+		display:none;
+	}
+
+	/* ===== #3.4 Nav-bar ===== */
+	nav{
+		padding-bottom:20px;
+	}
+	
+	nav .link{
+		display:none;
+	}
+	
+	nav .link-mobile{
+		display:block;
+		width:100%;
+		font-size:xx-large;
+		position:fixed;
+		background-color:black;
+		z-index:10;
+	}
+
+	/* ===== #3.5 Main section ===== */
+	#icons {
+		display:none;
+	}
+
+	.column{
+		display:none;
+	}
+	
+	.stall-container {
+		width:100%;
+	}
+	
+	.stall-text{
+		width:100%;
+	}
+	
+	.stall-image{
+		display:none;
+	}
+	
+	.stall-banner{
+		display:none;
+	}
+
+	#past-stalls{
+		display:none;
+	}
+	
+	.feature-image{
+		display:none;
+	}
+	
+	#past-timetables{
+		display:none;
+	}
+	
+	#mobile-timetable{
+		display:block;
+	}
+
+	/* ===== #3.6 Links ===== */
+	/* ===== #3.7 Image drops ===== */
+	.imagefloat {
+	  display: none;
+	}
+
+	/* ===== #3.8 Social ===== */
+	#social a img {
+		opacity: 1;
+		-moz-opacity: 1;
+	}
+
+	/* ===== #3.9 Footer ===== */
+	#main {
+		overflow:auto;
+	}	
+	
+	footer {
+		position: relative;
+		height: 50px;
+		clear:both;
+		width:100%;
+		background-color: rgba(100,100,100,0);
+	}
+	
+	/* ===== #3.10 Ridiculous stuff ===== */
+
+	
+	}
+
+	/* #4.0 Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	/* ===== #4.2 Overall ===== */
+	body {
+	  background-color: #999;
+	  background-image: url('res/linen.png');
+	  background-repeat: repeat;
+	}
+	
+	#wrap {
+		width: 100%;
+/*	  background-color:blue;	*/
+		background-color: rgba(100,100,100,0);
+	}
+
+	/* ===== #4.3 Header ===== */
+	header{
+		display:none;
+	}
+
+	/* ===== #4.4 Nav-bar ===== */	
+	nav .link{
+		display:none;
+	}
+	
+	nav .link-mobile{
+		display:block;
+		width:100%;
+		font-size:xx-large;
+	}
+
+	/* ===== #4.5 Main section ===== */
+	#icons {
+		display:none;
+	}
+	
+	.column{
+		display:none;
+	}
+	
+	.stall-container {
+		width:100%;
+	}
+	
+	.stall-text{
+		width:100%;
+	}
+	
+	.stall-image{
+		display:none;
+	}
+
+	.stall-banner{
+		display:none;
+	}
+
+	#past-stalls{
+		display:none;
+	}
+	
+	.feature-image{
+		display:none;
+	}
+	
+	#past-timetables{
+		display:none;
+	}
+
+	#mobile-timetable{
+		display:block;
+	}
+
+	/* ===== #4.6 Links ===== */
+	/* ===== #4.7 Image drops ===== */
+	.imagefloat {
+	  display: none;
+	}
+
+	/* ===== #4.8 Social ===== */
+	
+	/* ===== #4.9 Footer ===== */
+	#main {
+		overflow:auto;
+	}	
+	
+	footer {
+		position: relative;
+		height: 50px;
+		clear:both;
+		width:100%;
+		background-color: rgba(100,100,100,0);
+	}
+	
+	/* ===== #4.10 Ridiculous stuff ===== */
+
+	}

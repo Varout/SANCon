@@ -1,0 +1,26 @@
+/* ========================================
+		Fonts
+======================================== */
+
+/* ==========
+Space Age Font can be found at:  http://www.dafont.com/space-age.font
+Comments, questions, complaints, love notes - please send them to jcmagic@yahoo.com.
+========== */
+
+@font-face {
+  font-family: 'Space Age';
+  src: url('fonts/space_age.ttf');
+}
+
+/*  CSS font stuff  */
+
+*{
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+header h1{
+	font-size:66px;
+	width:60%;
+	float:left;
+	font-family: 'Space Age';
+}

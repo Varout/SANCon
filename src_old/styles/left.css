@@ -1,0 +1,8 @@
+﻿header {
+  background-image: url('res/headers/old-left.jpg');
+  background-color:#000000;
+}
+
+nav .link:hover{
+	background:#00004A;
+}
